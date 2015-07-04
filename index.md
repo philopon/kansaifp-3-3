@@ -3,7 +3,7 @@
 
 1. ダウンロードして、
 
-    curl -LO https://goo.gl/t3TdIt
+    curl -LO https://raw.githubusercontent.com/philopon/kansaifp-3-3/gh-pages/kansaifp3-3_type-level-programing.ipynb
 
 2. tmpnb.orgを開いて、
 
