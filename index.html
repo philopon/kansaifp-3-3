@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+    <title>たのしい型レベルプログラミング</title>
+
+		<meta name="description" content="第3回関西関数型道場 スライド">
+		<meta name="author" content="@philomel202">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+
+    <!-- black
+		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/sunburst.css">
+    -->
+
+    <!-- white -->
+		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="github.css">
+    <!-- -->
+
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <style>
+.reveal pre.hljs { padding: 10px; font-family: 'Inconsolata', Courier, monospace; }
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 { text-transform: none}
+.highlight-code { color: red !important }
+.highlight-code * { color: red !important }
+.slide-number { font-size: 20px !important }
+    </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section data-markdown="index.md"
+                 data-separator="^\n==+\n"
+                 data-separator-vertical="^\n--+\n"
+                 data-separator-notes="^Note:"
+                 data-charset="UTF-8">
+        </section>
+			</div>
+
+		</div>
+
+		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="bower_components/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+        transitionSpeed: 'fast',
+        slideNumber: 'c / t',
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+          // { src: 'bower_components/reveal.js/plugin/remotes/remotes.js' , async: true },
+          { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js' , async: true },
+					{ src: 'bower_components/reveal.js/lib/js/classList.js',
+            condition: function() { return !document.body.classList; }
+          },
+					{ src: 'bower_components/reveal.js/plugin/markdown/marked.js',
+            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+          },
+					{ src: 'bower_components/reveal.js/plugin/markdown/markdown.js',
+            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+          },
+          { src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.configure({languages: ['haskell']});
+
+              var hl = document.querySelectorAll('.highlight');
+              for(var i = 0, l = hl.length; i < l; i++){
+                hljs.highlightBlock(hl[i]);
+              }
+            }
+          },
+					{ src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
